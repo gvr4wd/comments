@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { CommentsComponent } from './comments/comments.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CommentsComponent
   ],
   imports: [
     BrowserModule
@@ -15,4 +17,5 @@ import { AppComponent } from './app.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

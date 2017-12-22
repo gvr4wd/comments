@@ -1,0 +1,30 @@
+import {Component, Input, OnInit} from "@angular/core";
+
+@Component({
+  selector: 'app-comments',
+  // templateUrl: './comments.component.html',
+  template: `
+    <div *ngFor="let comment of comments"> 
+      <ul> 
+        <li> 
+          {{comment.text}} 
+          <app-comments [comments]="comment.comments" *ngIf="comment.comments"></app-comments> 
+        </li> 
+      </ul> 
+    </div> 
+  `,
+
+  styleUrls: ["./comments.component.css"]
+})
+export class CommentsComponent implements OnInit {
+
+  @Input() comments;
+
+
+  constructor() {
+  }
+
+  ngOnInit() {
+  }
+
+}
